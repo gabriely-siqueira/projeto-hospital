@@ -63,10 +63,10 @@
                           <Component id="horarioAtendimento" min="-2" pref="80" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="pressao" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="pressao" alignment="0" min="-2" pref="78" max="-2" attributes="0"/>
                               <Component id="sexoPaciente2" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="sexoPaciente3" min="-2" max="-2" attributes="0"/>
@@ -74,19 +74,23 @@
                               </Group>
                               <Component id="temperatura" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="bpm" alignment="0" min="-2" pref="82" max="-2" attributes="0"/>
-                              <Component id="sexoPaciente4" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="sexoPaciente5" min="-2" max="-2" attributes="0"/>
-                              <Component id="oximetria" min="-2" pref="117" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="sexoPaciente4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                                  <Component id="sexoPaciente5" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="bpm" min="-2" pref="89" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="oximetria" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="historicoDoencas" min="-2" pref="268" max="-2" attributes="0"/>
+                          <Component id="historicoDoencas1" min="-2" pref="268" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="alergias" max="32767" attributes="0"/>
                       </Group>
@@ -165,9 +169,9 @@
                       <Component id="dataAtendimento" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="horarioAtendimento" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="pressao" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="oximetria" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="temperatura" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="bpm" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="temperatura" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="oximetria" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -176,8 +180,8 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="historicoDoencas" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="alergias" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="historicoDoencas1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -282,55 +286,15 @@
             <Property name="text" type="java.lang.String" value="Hor&#xe1;rio"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="pressao">
-          <Properties>
-            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-              <Format format="" subtype="-1" type="5"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pressaoActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JLabel" name="sexoPaciente3">
           <Properties>
             <Property name="text" type="java.lang.String" value="Temperatura"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="oximetria">
-          <Properties>
-            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-              <Format format="" subtype="-1" type="5"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="oximetriaActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JLabel" name="sexoPaciente4">
           <Properties>
             <Property name="text" type="java.lang.String" value="BPM"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JFormattedTextField" name="temperatura">
-          <Properties>
-            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-              <Format format="" subtype="-1" type="5"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="temperaturaActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JFormattedTextField" name="bpm">
-          <Properties>
-            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-              <Format format="" subtype="-1" type="5"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bpmActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="sexoPaciente5">
           <Properties>
@@ -352,7 +316,7 @@
             <Property name="text" type="java.lang.String" value="Status"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="historicoDoencas">
+        <Component class="javax.swing.JFormattedTextField" name="pressao">
         </Component>
         <Component class="javax.swing.JFormattedTextField" name="alergias">
         </Component>
@@ -365,6 +329,14 @@
         <Component class="javax.swing.JFormattedTextField" name="classificacao">
         </Component>
         <Component class="javax.swing.JFormattedTextField" name="observacoes">
+        </Component>
+        <Component class="javax.swing.JFormattedTextField" name="historicoDoencas1">
+        </Component>
+        <Component class="javax.swing.JFormattedTextField" name="bpm">
+        </Component>
+        <Component class="javax.swing.JFormattedTextField" name="temperatura">
+        </Component>
+        <Component class="javax.swing.JFormattedTextField" name="oximetria">
         </Component>
       </SubComponents>
     </Container>

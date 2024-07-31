@@ -36,7 +36,6 @@ public class FornecedorForm extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         cidadePaciente2 = new javax.swing.JFormattedTextField();
         jLabel24 = new javax.swing.JLabel();
-        emailPaciente2 = new javax.swing.JFormattedTextField();
         jLabel25 = new javax.swing.JLabel();
         cepPaciente2 = new javax.swing.JFormattedTextField();
         jLabel26 = new javax.swing.JLabel();
@@ -44,11 +43,12 @@ public class FornecedorForm extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         bairroPaciente2 = new javax.swing.JFormattedTextField();
         jLabel28 = new javax.swing.JLabel();
-        logradouroPaciente2 = new javax.swing.JFormattedTextField();
         jLabel29 = new javax.swing.JLabel();
-        complementoPaciente2 = new javax.swing.JFormattedTextField();
         jLabel30 = new javax.swing.JLabel();
         telefonePaciente4 = new javax.swing.JFormattedTextField();
+        email = new javax.swing.JFormattedTextField();
+        logradouro = new javax.swing.JFormattedTextField();
+        complemento = new javax.swing.JFormattedTextField();
         jPaneltitulo = new javax.swing.JPanel();
         jLabelTitulo = new javax.swing.JLabel();
         jPanelBotoes = new javax.swing.JPanel();
@@ -85,12 +85,6 @@ public class FornecedorForm extends javax.swing.JFrame {
 
         jLabel24.setText("Email");
 
-        try {
-            emailPaciente2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
         jLabel25.setText("CEP");
 
         try {
@@ -111,19 +105,7 @@ public class FornecedorForm extends javax.swing.JFrame {
 
         jLabel28.setText("Logradouro");
 
-        try {
-            logradouroPaciente2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
         jLabel29.setText("Complemento");
-
-        try {
-            complementoPaciente2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
 
         jLabel30.setText("Telefone 2");
 
@@ -142,30 +124,30 @@ public class FornecedorForm extends javax.swing.JFrame {
                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDados3Layout.createSequentialGroup()
                         .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelDados3Layout.createSequentialGroup()
-                                .addComponent(cepPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cidadePaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bairroPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(logradouroPaciente2))
                             .addGroup(jPanelDados3Layout.createSequentialGroup()
                                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanelDados3Layout.createSequentialGroup()
                                         .addComponent(jLabel29)
                                         .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(complementoPaciente2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(complemento))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel30)
                                     .addComponent(telefonePaciente4, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelDados3Layout.createSequentialGroup()
                                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(nomeLabel2, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addComponent(nomeLabel2, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelDados3Layout.createSequentialGroup()
+                                        .addComponent(cepPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(cidadePaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(bairroPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(logradouro, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(11, 11, 11))
+                        .addGap(10, 10, 10))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDados3Layout.createSequentialGroup()
                         .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(nomePaciente2, javax.swing.GroupLayout.Alignment.LEADING)
@@ -181,21 +163,18 @@ public class FornecedorForm extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanelDados3Layout.createSequentialGroup()
+                                        .addComponent(jLabel23)
+                                        .addGap(69, 69, 69)
+                                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanelDados3Layout.createSequentialGroup()
+                                        .addComponent(jLabel27)
+                                        .addGap(85, 85, 85)
+                                        .addComponent(jLabel28))
+                                    .addGroup(jPanelDados3Layout.createSequentialGroup()
                                         .addComponent(TelefonePaciente3, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(emailPaciente2))
-                                    .addGroup(jPanelDados3Layout.createSequentialGroup()
-                                        .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanelDados3Layout.createSequentialGroup()
-                                                .addComponent(jLabel23)
-                                                .addGap(69, 69, 69)
-                                                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanelDados3Layout.createSequentialGroup()
-                                                .addComponent(jLabel27)
-                                                .addGap(85, 85, 85)
-                                                .addComponent(jLabel28)))
-                                        .addGap(0, 0, Short.MAX_VALUE)))))
-                        .addGap(13, 13, 13))))
+                                        .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addContainerGap())))
         );
         jPanelDados3Layout.setVerticalGroup(
             jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -215,8 +194,8 @@ public class FornecedorForm extends javax.swing.JFrame {
                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CPFPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TelefonePaciente3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(emailPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RGPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(RGPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel25)
@@ -228,15 +207,15 @@ public class FornecedorForm extends javax.swing.JFrame {
                     .addComponent(cepPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cidadePaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bairroPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(logradouroPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(logradouro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel29)
                     .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(complementoPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(telefonePaciente4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(telefonePaciente4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(complemento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
@@ -325,7 +304,7 @@ public class FornecedorForm extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPaneltitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanelBotoes, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
+            .addComponent(jPanelBotoes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanelDados3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -400,8 +379,8 @@ public class FornecedorForm extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField bairroPaciente2;
     private javax.swing.JFormattedTextField cepPaciente2;
     private javax.swing.JFormattedTextField cidadePaciente2;
-    private javax.swing.JFormattedTextField complementoPaciente2;
-    private javax.swing.JFormattedTextField emailPaciente2;
+    private javax.swing.JFormattedTextField complemento;
+    private javax.swing.JFormattedTextField email;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonGravar;
@@ -421,7 +400,7 @@ public class FornecedorForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelBotoes;
     private javax.swing.JPanel jPanelDados3;
     private javax.swing.JPanel jPaneltitulo;
-    private javax.swing.JFormattedTextField logradouroPaciente2;
+    private javax.swing.JFormattedTextField logradouro;
     private javax.swing.JLabel nomeLabel2;
     private javax.swing.JTextField nomePaciente2;
     private javax.swing.JFormattedTextField telefonePaciente4;

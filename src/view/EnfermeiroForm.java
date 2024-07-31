@@ -37,7 +37,6 @@ public class EnfermeiroForm extends javax.swing.JFrame {
         cidade = new javax.swing.JFormattedTextField();
         tipoSangPaciente2 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        emailMedico = new javax.swing.JFormattedTextField();
         jLabel25 = new javax.swing.JLabel();
         cep = new javax.swing.JFormattedTextField();
         jLabel26 = new javax.swing.JLabel();
@@ -45,14 +44,15 @@ public class EnfermeiroForm extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         bairro = new javax.swing.JFormattedTextField();
         jLabel28 = new javax.swing.JLabel();
-        logradouro = new javax.swing.JFormattedTextField();
         jLabel29 = new javax.swing.JLabel();
-        complemento = new javax.swing.JFormattedTextField();
         CRE = new javax.swing.JFormattedTextField();
         jLabel31 = new javax.swing.JLabel();
         login = new javax.swing.JFormattedTextField();
         senha = new javax.swing.JFormattedTextField();
         jLabel32 = new javax.swing.JLabel();
+        email = new javax.swing.JFormattedTextField();
+        logradouro = new javax.swing.JFormattedTextField();
+        complemento = new javax.swing.JFormattedTextField();
         jPaneltitulo = new javax.swing.JPanel();
         jLabelTitulo = new javax.swing.JLabel();
         jPanelBotoes = new javax.swing.JPanel();
@@ -95,12 +95,6 @@ public class EnfermeiroForm extends javax.swing.JFrame {
 
         jLabel24.setText("Email");
 
-        try {
-            emailMedico.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
         jLabel25.setText("CEP");
 
         try {
@@ -121,19 +115,7 @@ public class EnfermeiroForm extends javax.swing.JFrame {
 
         jLabel28.setText("Logradouro");
 
-        try {
-            logradouro.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
         jLabel29.setText("Complemento");
-
-        try {
-            complemento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
 
         jLabel31.setText("Login");
 
@@ -160,10 +142,6 @@ public class EnfermeiroForm extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanelDados3Layout.createSequentialGroup()
-                                        .addComponent(telefoneMedico, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(emailMedico))
-                                    .addGroup(jPanelDados3Layout.createSequentialGroup()
                                         .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanelDados3Layout.createSequentialGroup()
                                                 .addComponent(jLabel23)
@@ -173,7 +151,11 @@ public class EnfermeiroForm extends javax.swing.JFrame {
                                                 .addComponent(jLabel27)
                                                 .addGap(79, 79, 79)
                                                 .addComponent(jLabel28)))
-                                        .addGap(0, 0, Short.MAX_VALUE))))
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(jPanelDados3Layout.createSequentialGroup()
+                                        .addComponent(telefoneMedico, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(email))))
                             .addGroup(jPanelDados3Layout.createSequentialGroup()
                                 .addComponent(nomeEnfermeiro, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -185,17 +167,23 @@ public class EnfermeiroForm extends javax.swing.JFrame {
                                         .addComponent(jComboBoxSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(CRE)))))
-                        .addGap(13, 13, 13))
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDados3Layout.createSequentialGroup()
                         .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelDados3Layout.createSequentialGroup()
-                                .addComponent(cep, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanelDados3Layout.createSequentialGroup()
+                                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanelDados3Layout.createSequentialGroup()
+                                        .addComponent(complemento, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanelDados3Layout.createSequentialGroup()
+                                        .addComponent(jLabel29)
+                                        .addGap(280, 280, 280)
+                                        .addComponent(jLabel31)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cidade, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bairro, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(logradouro))
+                                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel32)
+                                    .addComponent(senha, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelDados3Layout.createSequentialGroup()
                                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelDados3Layout.createSequentialGroup()
@@ -204,22 +192,15 @@ public class EnfermeiroForm extends javax.swing.JFrame {
                                         .addComponent(tipoSangPaciente2))
                                     .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanelDados3Layout.createSequentialGroup()
-                                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanelDados3Layout.createSequentialGroup()
-                                        .addComponent(complemento)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                    .addGroup(jPanelDados3Layout.createSequentialGroup()
-                                        .addComponent(jLabel29)
-                                        .addGap(280, 280, 280)
-                                        .addComponent(jLabel31)
-                                        .addGap(81, 81, 81)))
-                                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel32)
-                                    .addComponent(senha, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(11, 11, 11))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelDados3Layout.createSequentialGroup()
+                                .addComponent(cep, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cidade, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bairro, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(logradouro)))
+                        .addGap(10, 10, 10))))
         );
         jPanelDados3Layout.setVerticalGroup(
             jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -245,8 +226,8 @@ public class EnfermeiroForm extends javax.swing.JFrame {
                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cpfEnfermeiro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(telefoneMedico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(emailMedico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rgEnfermeiro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(rgEnfermeiro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel25)
@@ -266,9 +247,9 @@ public class EnfermeiroForm extends javax.swing.JFrame {
                     .addComponent(jLabel32))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(complemento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(complemento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
@@ -432,7 +413,7 @@ public class EnfermeiroForm extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField cidade;
     private javax.swing.JFormattedTextField complemento;
     private javax.swing.JFormattedTextField cpfEnfermeiro;
-    private javax.swing.JFormattedTextField emailMedico;
+    private javax.swing.JFormattedTextField email;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonGravar;
