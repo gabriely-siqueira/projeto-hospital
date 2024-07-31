@@ -25,7 +25,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="jPaneltitulo" alignment="0" max="32767" attributes="0"/>
-          <Component id="jPanelBotoes" alignment="0" pref="593" max="32767" attributes="0"/>
+          <Component id="jPanelBotoes" alignment="0" max="32767" attributes="0"/>
           <Component id="jPanelDados3" alignment="1" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
@@ -57,8 +57,24 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="nomeLabel2" alignment="0" min="-2" pref="48" max="-2" attributes="0"/>
+                              <Component id="statusAtendimento" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                              <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="nomeAcompanhante" min="-2" pref="330" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="sexoPaciente2" min="-2" pref="141" max="-2" attributes="0"/>
+                                      <Component id="grauParentesco" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="CPFPaciente2" min="-2" pref="107" max="-2" attributes="0"/>
@@ -77,37 +93,17 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="TelefonePaciente3" min="-2" pref="109" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="emailPaciente2" max="32767" attributes="0"/>
+                                          <Component id="email" min="-2" pref="238" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                                           <Component id="jLabel24" min="-2" pref="40" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="191" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="nomeAcompanhante" min="-2" pref="330" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="sexoPaciente2" min="-2" pref="141" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="grauParentesco" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="nomeLabel2" alignment="0" min="-2" pref="48" max="-2" attributes="0"/>
-                              <Component id="statusAtendimento" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
-                              <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -139,8 +135,8 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="CPFPaciente2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="TelefonePaciente3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="emailPaciente2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="RGPaciente2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="email" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                   <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
@@ -198,24 +194,10 @@
             <Property name="text" type="java.lang.String" value="Email"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="emailPaciente2">
-          <Properties>
-            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-              <Format format="" subtype="-1" type="5"/>
-            </Property>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JFormattedTextField" name="RGPaciente2">
           <Properties>
             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
               <Format format="##.###.###-#" subtype="-1" type="5"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JFormattedTextField" name="grauParentesco">
-          <Properties>
-            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-              <Format format="" subtype="-1" type="5"/>
             </Property>
           </Properties>
         </Component>
@@ -239,6 +221,13 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="CPF"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="email">
+        </Component>
+        <Component class="javax.swing.JTextField" name="grauParentesco">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grauParentescoActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

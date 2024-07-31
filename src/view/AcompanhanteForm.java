@@ -36,11 +36,11 @@ public class AcompanhanteForm extends javax.swing.JFrame {
         TelefonePaciente3 = new javax.swing.JFormattedTextField();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        emailPaciente2 = new javax.swing.JFormattedTextField();
         RGPaciente2 = new javax.swing.JFormattedTextField();
-        grauParentesco = new javax.swing.JFormattedTextField();
         statusAtendimento = new javax.swing.JComboBox<>();
         jLabel31 = new javax.swing.JLabel();
+        email = new javax.swing.JTextField();
+        grauParentesco = new javax.swing.JTextField();
         jPaneltitulo = new javax.swing.JPanel();
         jLabelTitulo = new javax.swing.JLabel();
         jPanelBotoes = new javax.swing.JPanel();
@@ -80,19 +80,7 @@ public class AcompanhanteForm extends javax.swing.JFrame {
         jLabel24.setText("Email");
 
         try {
-            emailPaciente2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
-        try {
             RGPaciente2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###.###-#")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
-        try {
-            grauParentesco.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
@@ -106,6 +94,12 @@ public class AcompanhanteForm extends javax.swing.JFrame {
 
         jLabel31.setText("CPF");
 
+        grauParentesco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                grauParentescoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelDados3Layout = new javax.swing.GroupLayout(jPanelDados3);
         jPanelDados3.setLayout(jPanelDados3Layout);
         jPanelDados3Layout.setHorizontalGroup(
@@ -113,8 +107,20 @@ public class AcompanhanteForm extends javax.swing.JFrame {
             .addGroup(jPanelDados3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDados3Layout.createSequentialGroup()
+                    .addGroup(jPanelDados3Layout.createSequentialGroup()
                         .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nomeLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(statusAtendimento, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel21))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanelDados3Layout.createSequentialGroup()
+                        .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelDados3Layout.createSequentialGroup()
+                                .addComponent(nomeAcompanhante, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(sexoPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(grauParentesco)))
                             .addGroup(jPanelDados3Layout.createSequentialGroup()
                                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(CPFPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -130,27 +136,12 @@ public class AcompanhanteForm extends javax.swing.JFrame {
                                     .addGroup(jPanelDados3Layout.createSequentialGroup()
                                         .addComponent(TelefonePaciente3, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(emailPaciente2))
+                                        .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanelDados3Layout.createSequentialGroup()
                                         .addComponent(jLabel23)
                                         .addGap(69, 69, 69)
-                                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 191, Short.MAX_VALUE))))
-                            .addGroup(jPanelDados3Layout.createSequentialGroup()
-                                .addComponent(nomeAcompanhante, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanelDados3Layout.createSequentialGroup()
-                                        .addComponent(sexoPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(grauParentesco))))
-                        .addGap(13, 13, 13))
-                    .addGroup(jPanelDados3Layout.createSequentialGroup()
-                        .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomeLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(statusAtendimento, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel21))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanelDados3Layout.setVerticalGroup(
             jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,8 +165,8 @@ public class AcompanhanteForm extends javax.swing.JFrame {
                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CPFPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TelefonePaciente3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(emailPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RGPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(RGPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addComponent(jLabel21)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -268,7 +259,7 @@ public class AcompanhanteForm extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPaneltitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanelBotoes, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
+            .addComponent(jPanelBotoes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanelDados3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -304,6 +295,10 @@ public class AcompanhanteForm extends javax.swing.JFrame {
     private void statusAtendimentojComboBoxSaguineoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusAtendimentojComboBoxSaguineoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_statusAtendimentojComboBoxSaguineoActionPerformed
+
+    private void grauParentescoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grauParentescoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_grauParentescoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -344,8 +339,8 @@ public class AcompanhanteForm extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField CPFPaciente2;
     private javax.swing.JFormattedTextField RGPaciente2;
     private javax.swing.JFormattedTextField TelefonePaciente3;
-    private javax.swing.JFormattedTextField emailPaciente2;
-    private javax.swing.JFormattedTextField grauParentesco;
+    private javax.swing.JTextField email;
+    private javax.swing.JTextField grauParentesco;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonGravar;
