@@ -63,20 +63,23 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="nomePaciente2" alignment="0" min="-2" pref="330" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="nomeLabel3" min="-2" pref="101" max="-2" attributes="0"/>
-                                      <Component id="dataAtendimento2" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
+                                      <Component id="dataInicial" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="dataAtendimento1" min="-2" pref="76" max="-2" attributes="0"/>
-                                      <Component id="nomeLabel4" min="-2" pref="101" max="-2" attributes="0"/>
+                                      <Component id="nomeLabel4" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
+                                      <Component id="dataFinal" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="cargaHoraria" min="-2" pref="85" max="-2" attributes="0"/>
+                                      <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Component id="jLabel28" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="logradouroPaciente2" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
+                              <Component id="funcionario" alignment="0" min="-2" pref="529" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
@@ -90,22 +93,20 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="nomeLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="nomePaciente2" min="-2" max="-2" attributes="0"/>
+                  <Component id="funcionario" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="nomeLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="nomeLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="dataAtendimento1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="dataAtendimento2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="dataFinal" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="dataInicial" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cargaHoraria" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="logradouroPaciente2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="84" max="32767" attributes="0"/>
+                  <EmptySpace pref="146" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -116,18 +117,11 @@
             <Property name="text" type="java.lang.String" value="Funcionario:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="nomePaciente2">
+        <Component class="javax.swing.JTextField" name="funcionario">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel28">
           <Properties>
             <Property name="text" type="java.lang.String" value="Carga Hor&#xe1;ria:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JFormattedTextField" name="logradouroPaciente2">
-          <Properties>
-            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-              <Format format="" subtype="-1" type="5"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="nomeLabel3">
@@ -135,14 +129,14 @@
             <Property name="text" type="java.lang.String" value="Data inicial:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="dataAtendimento1">
+        <Component class="javax.swing.JFormattedTextField" name="dataFinal">
           <Properties>
             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
               <Format format="##/##/####" subtype="-1" type="5"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dataAtendimento1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dataFinalActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="nomeLabel4">
@@ -150,15 +144,17 @@
             <Property name="text" type="java.lang.String" value="Data final:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="dataAtendimento2">
+        <Component class="javax.swing.JFormattedTextField" name="dataInicial">
           <Properties>
             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
               <Format format="##/##/####" subtype="-1" type="5"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dataAtendimento2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dataInicialActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="cargaHoraria">
         </Component>
       </SubComponents>
     </Container>

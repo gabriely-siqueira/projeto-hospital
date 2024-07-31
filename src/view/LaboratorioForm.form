@@ -59,26 +59,26 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="nomePaciente2" alignment="0" min="-2" pref="330" max="-2" attributes="0"/>
+                              <Component id="status" alignment="0" min="-2" pref="330" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="emailPaciente2" pref="228" max="32767" attributes="0"/>
+                                      <Component id="email" min="-2" pref="330" max="-2" attributes="0"/>
                                       <Component id="jLabel24" min="-2" pref="40" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="192" max="-2" attributes="0"/>
+                          <EmptySpace pref="90" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="TelefonePaciente3" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                              <Component id="telefone" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
                               <Component id="nomeLabel2" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
                               <Component id="nomeLabel3" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
-                              <Component id="nomePaciente3" alignment="0" min="-2" pref="330" max="-2" attributes="0"/>
+                              <Component id="nomeFantasia" alignment="0" min="-2" pref="493" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="90" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -90,7 +90,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="nomeLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="nomePaciente3" min="-2" max="-2" attributes="0"/>
+                  <Component id="nomeFantasia" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel24" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
@@ -98,13 +98,13 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="TelefonePaciente3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="emailPaciente2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="telefone" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="email" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="nomeLabel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="nomePaciente2" min="-2" max="-2" attributes="0"/>
+                  <Component id="status" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="66" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -116,9 +116,9 @@
             <Property name="text" type="java.lang.String" value="Nome fantasia:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="nomePaciente2">
+        <Component class="javax.swing.JTextField" name="status">
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="TelefonePaciente3">
+        <Component class="javax.swing.JFormattedTextField" name="telefone">
           <Properties>
             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
               <Format format="(##) #####-####" subtype="-1" type="5"/>
@@ -135,19 +135,14 @@
             <Property name="text" type="java.lang.String" value="Email:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="emailPaciente2">
-          <Properties>
-            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-              <Format format="" subtype="-1" type="5"/>
-            </Property>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="nomeLabel3">
           <Properties>
             <Property name="text" type="java.lang.String" value="Status:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="nomePaciente3">
+        <Component class="javax.swing.JTextField" name="nomeFantasia">
+        </Component>
+        <Component class="javax.swing.JTextField" name="email">
         </Component>
       </SubComponents>
     </Container>

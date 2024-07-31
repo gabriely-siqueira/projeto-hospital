@@ -26,13 +26,13 @@ public class JornadaForm extends javax.swing.JFrame {
 
         jPanelDados3 = new javax.swing.JPanel();
         nomeLabel2 = new javax.swing.JLabel();
-        nomePaciente2 = new javax.swing.JTextField();
+        funcionario = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
-        logradouroPaciente2 = new javax.swing.JFormattedTextField();
         nomeLabel3 = new javax.swing.JLabel();
-        dataAtendimento1 = new javax.swing.JFormattedTextField();
+        dataFinal = new javax.swing.JFormattedTextField();
         nomeLabel4 = new javax.swing.JLabel();
-        dataAtendimento2 = new javax.swing.JFormattedTextField();
+        dataInicial = new javax.swing.JFormattedTextField();
+        cargaHoraria = new javax.swing.JTextField();
         jPaneltitulo = new javax.swing.JPanel();
         jLabelTitulo = new javax.swing.JLabel();
         jPanelBotoes = new javax.swing.JPanel();
@@ -51,35 +51,29 @@ public class JornadaForm extends javax.swing.JFrame {
 
         jLabel28.setText("Carga Horária:");
 
-        try {
-            logradouroPaciente2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
         nomeLabel3.setText("Data inicial:");
 
         try {
-            dataAtendimento1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+            dataFinal.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        dataAtendimento1.addActionListener(new java.awt.event.ActionListener() {
+        dataFinal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dataAtendimento1ActionPerformed(evt);
+                dataFinalActionPerformed(evt);
             }
         });
 
         nomeLabel4.setText("Data final:");
 
         try {
-            dataAtendimento2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+            dataInicial.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        dataAtendimento2.addActionListener(new java.awt.event.ActionListener() {
+        dataInicial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dataAtendimento2ActionPerformed(evt);
+                dataInicialActionPerformed(evt);
             }
         });
 
@@ -95,17 +89,19 @@ public class JornadaForm extends javax.swing.JFrame {
                         .addGap(11, 482, Short.MAX_VALUE))
                     .addGroup(jPanelDados3Layout.createSequentialGroup()
                         .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomePaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanelDados3Layout.createSequentialGroup()
                                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(nomeLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(dataAtendimento2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(dataInicial, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(38, 38, 38)
                                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(dataAtendimento1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(nomeLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel28)
-                            .addComponent(logradouroPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(nomeLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(dataFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(47, 47, 47)
+                                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cargaHoraria, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel28)))
+                            .addComponent(funcionario, javax.swing.GroupLayout.PREFERRED_SIZE, 529, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanelDados3Layout.setVerticalGroup(
@@ -114,20 +110,18 @@ public class JornadaForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(nomeLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nomePaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(funcionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nomeLabel3)
-                    .addComponent(nomeLabel4))
+                    .addComponent(nomeLabel4)
+                    .addComponent(jLabel28))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dataAtendimento1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dataAtendimento2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel28)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(logradouroPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(84, Short.MAX_VALUE))
+                    .addComponent(dataFinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dataInicial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cargaHoraria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(146, Short.MAX_VALUE))
         );
 
         jPaneltitulo.setBackground(new java.awt.Color(153, 255, 102));
@@ -248,13 +242,13 @@ public class JornadaForm extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButtonSairActionPerformed
 
-    private void dataAtendimento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataAtendimento1ActionPerformed
+    private void dataFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataFinalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dataAtendimento1ActionPerformed
+    }//GEN-LAST:event_dataFinalActionPerformed
 
-    private void dataAtendimento2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataAtendimento2ActionPerformed
+    private void dataInicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataInicialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dataAtendimento2ActionPerformed
+    }//GEN-LAST:event_dataInicialActionPerformed
 
     /**
      * @param args the command line arguments
@@ -292,8 +286,10 @@ public class JornadaForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JFormattedTextField dataAtendimento1;
-    private javax.swing.JFormattedTextField dataAtendimento2;
+    private javax.swing.JTextField cargaHoraria;
+    private javax.swing.JFormattedTextField dataFinal;
+    private javax.swing.JFormattedTextField dataInicial;
+    private javax.swing.JTextField funcionario;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonGravar;
@@ -304,10 +300,8 @@ public class JornadaForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelBotoes;
     private javax.swing.JPanel jPanelDados3;
     private javax.swing.JPanel jPaneltitulo;
-    private javax.swing.JFormattedTextField logradouroPaciente2;
     private javax.swing.JLabel nomeLabel2;
     private javax.swing.JLabel nomeLabel3;
     private javax.swing.JLabel nomeLabel4;
-    private javax.swing.JTextField nomePaciente2;
     // End of variables declaration//GEN-END:variables
 }

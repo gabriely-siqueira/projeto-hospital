@@ -29,14 +29,14 @@ public class Medicamento extends javax.swing.JFrame {
         jPanelDados3 = new javax.swing.JPanel();
         nomeLabel2 = new javax.swing.JLabel();
         nomePaciente2 = new javax.swing.JTextField();
-        cidadePaciente2 = new javax.swing.JFormattedTextField();
-        emailPaciente2 = new javax.swing.JFormattedTextField();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         bairroPaciente2 = new javax.swing.JFormattedTextField();
         jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
-        complementoPaciente2 = new javax.swing.JFormattedTextField();
+        nomePaciente3 = new javax.swing.JTextField();
+        nomePaciente4 = new javax.swing.JTextField();
+        nomePaciente5 = new javax.swing.JTextField();
         jPaneltitulo = new javax.swing.JPanel();
         jLabelTitulo = new javax.swing.JLabel();
         jPanelBotoes = new javax.swing.JPanel();
@@ -53,12 +53,6 @@ public class Medicamento extends javax.swing.JFrame {
 
         nomeLabel2.setText("Id:");
 
-        try {
-            emailPaciente2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
         jLabel26.setText("Principio Ativo:");
 
         jLabel27.setText("Quantidade Miníma:");
@@ -67,12 +61,6 @@ public class Medicamento extends javax.swing.JFrame {
 
         jLabel29.setText("Descrição:");
 
-        try {
-            complementoPaciente2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
         javax.swing.GroupLayout jPanelDados3Layout = new javax.swing.GroupLayout(jPanelDados3);
         jPanelDados3.setLayout(jPanelDados3Layout);
         jPanelDados3Layout.setHorizontalGroup(
@@ -80,32 +68,33 @@ public class Medicamento extends javax.swing.JFrame {
             .addGroup(jPanelDados3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanelDados3Layout.createSequentialGroup()
+                    .addGroup(jPanelDados3Layout.createSequentialGroup()
+                        .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(nomePaciente3, javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel28)
+                                    .addGroup(jPanelDados3Layout.createSequentialGroup()
+                                        .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(nomePaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel26))
+                                        .addGap(125, 125, 125)))
                                 .addGroup(jPanelDados3Layout.createSequentialGroup()
-                                    .addComponent(jLabel29)
-                                    .addGap(0, 0, Short.MAX_VALUE))
-                                .addComponent(complementoPaciente2))
-                            .addGap(132, 132, 132))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelDados3Layout.createSequentialGroup()
-                            .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel27, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(cidadePaciente2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(nomeLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(0, 0, Short.MAX_VALUE)))
+                                    .addGap(198, 198, 198)
+                                    .addComponent(bairroPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel27)
+                            .addGroup(jPanelDados3Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(nomePaciente5, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(108, 108, 108))
                     .addGroup(jPanelDados3Layout.createSequentialGroup()
                         .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel28)
-                                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(nomePaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel26)
-                                    .addComponent(emailPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanelDados3Layout.createSequentialGroup()
-                                .addGap(198, 198, 198)
-                                .addComponent(bairroPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(nomeLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nomePaciente4, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel29))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanelDados3Layout.setVerticalGroup(
             jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,20 +108,18 @@ public class Medicamento extends javax.swing.JFrame {
                     .addComponent(nomePaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bairroPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel26)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(emailPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelDados3Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(cidadePaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
                     .addComponent(jLabel27))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nomePaciente3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nomePaciente5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(jLabel29)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(complementoPaciente2, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(nomePaciente4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         jPaneltitulo.setBackground(new java.awt.Color(153, 255, 102));
@@ -290,9 +277,6 @@ public class Medicamento extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFormattedTextField bairroPaciente2;
-    private javax.swing.JFormattedTextField cidadePaciente2;
-    private javax.swing.JFormattedTextField complementoPaciente2;
-    private javax.swing.JFormattedTextField emailPaciente2;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonGravar;
@@ -308,5 +292,8 @@ public class Medicamento extends javax.swing.JFrame {
     private javax.swing.JPanel jPaneltitulo;
     private javax.swing.JLabel nomeLabel2;
     private javax.swing.JTextField nomePaciente2;
+    private javax.swing.JTextField nomePaciente3;
+    private javax.swing.JTextField nomePaciente4;
+    private javax.swing.JTextField nomePaciente5;
     // End of variables declaration//GEN-END:variables
 }
