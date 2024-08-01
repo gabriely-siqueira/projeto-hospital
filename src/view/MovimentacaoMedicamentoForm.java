@@ -5,10 +5,10 @@
 package view;
 
 
-public class JornadaForm extends javax.swing.JFrame {
+public class MovimentacaoMedicamentoForm extends javax.swing.JFrame {
 
    
-    public JornadaForm() {
+    public MovimentacaoMedicamentoForm() {
         initComponents();
     }
 
@@ -22,14 +22,20 @@ public class JornadaForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanelDados3 = new javax.swing.JPanel();
+        horarioConsulta = new javax.swing.JFormattedTextField();
         nomeLabel2 = new javax.swing.JLabel();
-        funcionario = new javax.swing.JTextField();
-        jLabel28 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        statusAtendimento = new javax.swing.JComboBox<>();
+        jLabel26 = new javax.swing.JLabel();
+        dataConsulta = new javax.swing.JFormattedTextField();
         nomeLabel3 = new javax.swing.JLabel();
-        dataFinal = new javax.swing.JFormattedTextField();
+        jLabel33 = new javax.swing.JLabel();
         nomeLabel4 = new javax.swing.JLabel();
-        dataInicial = new javax.swing.JFormattedTextField();
-        cargaHoraria = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        diagnostico = new javax.swing.JFormattedTextField();
+        anamnese = new javax.swing.JFormattedTextField();
+        responsavel3 = new javax.swing.JFormattedTextField();
+        prescricao = new javax.swing.JFormattedTextField();
         jPaneltitulo = new javax.swing.JPanel();
         jLabelTitulo = new javax.swing.JLabel();
         jPanelBotoes = new javax.swing.JPanel();
@@ -44,35 +50,43 @@ public class JornadaForm extends javax.swing.JFrame {
 
         jPanelDados3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        nomeLabel2.setText("Funcionario:");
-
-        jLabel28.setText("Carga Horária:");
-
-        nomeLabel3.setText("Data inicial:");
-
         try {
-            dataFinal.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+            horarioConsulta.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        dataFinal.addActionListener(new java.awt.event.ActionListener() {
+
+        nomeLabel2.setText("Data ");
+
+        jLabel21.setText("Observação");
+
+        statusAtendimento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione", "" }));
+        statusAtendimento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dataFinalActionPerformed(evt);
+                statusAtendimentojComboBoxSaguineoActionPerformed(evt);
             }
         });
 
-        nomeLabel4.setText("Data final:");
+        jLabel26.setText("Quantidade");
 
         try {
-            dataInicial.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+            dataConsulta.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        dataInicial.addActionListener(new java.awt.event.ActionListener() {
+        dataConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dataInicialActionPerformed(evt);
+                dataConsultaActionPerformed(evt);
             }
         });
+
+        nomeLabel3.setText("Horário");
+
+        jLabel33.setText("Status");
+
+        nomeLabel4.setText("Medicamento");
+
+        jLabel34.setText("Prescrição");
 
         javax.swing.GroupLayout jPanelDados3Layout = new javax.swing.GroupLayout(jPanelDados3);
         jPanelDados3.setLayout(jPanelDados3Layout);
@@ -82,43 +96,74 @@ public class JornadaForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDados3Layout.createSequentialGroup()
-                        .addComponent(nomeLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(11, 482, Short.MAX_VALUE))
-                    .addGroup(jPanelDados3Layout.createSequentialGroup()
+                        .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelDados3Layout.createSequentialGroup()
+                                .addComponent(jLabel21)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(diagnostico, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE))
+                        .addGap(37, 37, 37)
+                        .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(anamnese, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel26))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDados3Layout.createSequentialGroup()
                         .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelDados3Layout.createSequentialGroup()
                                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(nomeLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(dataInicial, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(38, 38, 38)
-                                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(nomeLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(dataFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(47, 47, 47)
-                                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cargaHoraria, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel28)))
-                            .addComponent(funcionario, javax.swing.GroupLayout.PREFERRED_SIZE, 529, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                    .addGroup(jPanelDados3Layout.createSequentialGroup()
+                                        .addComponent(nomeLabel2)
+                                        .addGap(65, 65, 65)
+                                        .addComponent(nomeLabel3))
+                                    .addComponent(jLabel34))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(prescricao))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(statusAtendimento, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(6, 6, 6))
+                    .addGroup(jPanelDados3Layout.createSequentialGroup()
+                        .addComponent(dataConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(horarioConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelDados3Layout.createSequentialGroup()
+                                .addComponent(nomeLabel4)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(responsavel3))
+                        .addContainerGap())))
         );
         jPanelDados3Layout.setVerticalGroup(
             jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelDados3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(nomeLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(funcionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nomeLabel2)
                     .addComponent(nomeLabel3)
-                    .addComponent(nomeLabel4)
-                    .addComponent(jLabel28))
+                    .addComponent(nomeLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dataFinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dataInicial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cargaHoraria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(107, Short.MAX_VALUE))
+                    .addComponent(dataConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(horarioConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(responsavel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(jLabel26))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(diagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(anamnese, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel34)
+                    .addComponent(jLabel33))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelDados3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(statusAtendimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prescricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         jPaneltitulo.setBackground(new java.awt.Color(153, 255, 102));
@@ -127,7 +172,7 @@ public class JornadaForm extends javax.swing.JFrame {
         jLabelTitulo.setBackground(new java.awt.Color(204, 255, 204));
         jLabelTitulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelTitulo.setText("Jornada do Funcionário");
+        jLabelTitulo.setText("Movimentação de Medicamento");
         jLabelTitulo.setToolTipText("");
 
         javax.swing.GroupLayout jPaneltituloLayout = new javax.swing.GroupLayout(jPaneltitulo);
@@ -206,7 +251,7 @@ public class JornadaForm extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPaneltitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanelBotoes, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
+            .addComponent(jPanelBotoes, javax.swing.GroupLayout.DEFAULT_SIZE, 594, Short.MAX_VALUE)
             .addComponent(jPanelDados3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -214,8 +259,8 @@ public class JornadaForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPaneltitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelDados3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanelDados3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanelBotoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -239,13 +284,13 @@ public class JornadaForm extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButtonSairActionPerformed
 
-    private void dataFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataFinalActionPerformed
+    private void dataConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataConsultaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dataFinalActionPerformed
+    }//GEN-LAST:event_dataConsultaActionPerformed
 
-    private void dataInicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataInicialActionPerformed
+    private void statusAtendimentojComboBoxSaguineoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusAtendimentojComboBoxSaguineoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dataInicialActionPerformed
+    }//GEN-LAST:event_statusAtendimentojComboBoxSaguineoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -277,22 +322,25 @@ public class JornadaForm extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JornadaForm().setVisible(true);
+                new MovimentacaoMedicamentoForm().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField cargaHoraria;
-    private javax.swing.JFormattedTextField dataFinal;
-    private javax.swing.JFormattedTextField dataInicial;
-    private javax.swing.JTextField funcionario;
+    private javax.swing.JFormattedTextField anamnese;
+    private javax.swing.JFormattedTextField dataConsulta;
+    private javax.swing.JFormattedTextField diagnostico;
+    private javax.swing.JFormattedTextField horarioConsulta;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonGravar;
     private javax.swing.JButton jButtonNovo;
     private javax.swing.JButton jButtonSair;
-    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JPanel jPanelBotoes;
     private javax.swing.JPanel jPanelDados3;
@@ -300,5 +348,8 @@ public class JornadaForm extends javax.swing.JFrame {
     private javax.swing.JLabel nomeLabel2;
     private javax.swing.JLabel nomeLabel3;
     private javax.swing.JLabel nomeLabel4;
+    private javax.swing.JFormattedTextField prescricao;
+    private javax.swing.JFormattedTextField responsavel3;
+    private javax.swing.JComboBox<String> statusAtendimento;
     // End of variables declaration//GEN-END:variables
 }

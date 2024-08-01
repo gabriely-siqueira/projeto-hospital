@@ -4,10 +4,6 @@
  */
 package view;
 
-/**
- *
- * @author gabriely
- */
 public class FarmaceuticoForm extends javax.swing.JFrame {
 
    

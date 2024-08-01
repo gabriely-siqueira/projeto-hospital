@@ -4,10 +4,7 @@
  */
 package view;
 
-/**
- *
- * @author gabriely
- */
+
 public class AcompanhanteForm extends javax.swing.JFrame {
 
     /**

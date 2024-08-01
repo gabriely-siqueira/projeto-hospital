@@ -4,10 +4,7 @@
  */
 package view;
 
-/**
- *
- * @author gabriely
- */
+
 public class LaboratorioMedicamento extends javax.swing.JFrame {
 
    

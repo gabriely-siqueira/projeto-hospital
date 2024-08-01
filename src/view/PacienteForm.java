@@ -4,10 +4,7 @@
  */
 package view;
 
-/**
- *
- * @author gabriely
- */
+
 public class PacienteForm extends javax.swing.JFrame {
 
     /**

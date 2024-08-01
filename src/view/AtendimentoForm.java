@@ -4,10 +4,7 @@
  */
 package view;
 
-/**
- *
- * @author gabriely
- */
+
 public class AtendimentoForm extends javax.swing.JFrame {
 
    

@@ -4,10 +4,7 @@
  */
 package view;
 
-/**
- *
- * @author gabriely
- */
+
 public class ConsultaForm extends javax.swing.JFrame {
 
    

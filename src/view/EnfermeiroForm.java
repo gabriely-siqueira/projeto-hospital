@@ -4,10 +4,7 @@
  */
 package view;
 
-/**
- *
- * @author gabriely
- */
+
 public class EnfermeiroForm extends javax.swing.JFrame {
 
    

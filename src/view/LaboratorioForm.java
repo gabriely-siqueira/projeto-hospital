@@ -4,10 +4,7 @@
  */
 package view;
 
-/**
- *
- * @author gabriely
- */
+
 public class LaboratorioForm extends javax.swing.JFrame {
 
    

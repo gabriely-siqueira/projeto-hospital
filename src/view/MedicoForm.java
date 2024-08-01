@@ -4,10 +4,7 @@
  */
 package view;
 
-/**
- *
- * @author gabriely
- */
+
 public class MedicoForm extends javax.swing.JFrame {
 
    

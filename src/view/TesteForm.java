@@ -4,10 +4,7 @@
  */
 package view;
 
-/**
- *
- * @author gabriely
- */
+
 public class TesteForm extends javax.swing.JFrame {
 
    
